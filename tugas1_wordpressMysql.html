@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Install Wordpress-Ocha</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">Ocha Oktafia</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('../ochaoktafia/assets/img/wordpress\ web.png')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            <h2>Berikut adalah Penjelasan Mengenai setiap Langkah Install dan Konfigurasi</h2>
+                            <span class="meta">
+                                Posted by
+                                <a href="#!">OchaRKS3A</a>
+                                on August 26, 2022
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        
+                        <h2 class="section-heading">Menginstall dan Konfigurasi Wordpress dengan Database MySQL</h2>
+                        <p>Disini kita akan melakukan percobaan pada system operasi windows, maka hal yang perlu disiapkan yaitu berupa ; <br>
+                            <br> - Xampp,
+                            <br> - Wordpress,
+                            <br> - Aplikasi Zip.
+                        </p>
+                        <!-- Langkah 1 -->
+                        <p>Xampp singkatan dari X (cross platform), A (Apache), M (MySQL/MariaDB), P (PHP), dan P (Perl).<br>
+                            <strong>Xampp</strong> adalah perangkat lunak berbasis web server yang bersifat open source. Salah satu fungsi menguji fitur dan mengakses website tanpa internet.
+                        </p>
+                        <p><strong>Wordpress</strong> adalah system manajemen konten (CMS) yang bisa digunakan untuk membuat dan mengelola website atau blog. Sistem WordPress berjalan menggunakan PHP dan database MySQL atau MariaDB.</p>
+                        <p><strong>1. Berikut Langkah dalam menginstall dan konfigurasi Xampp :</strong><br></p>
+                        <p>1. Download xampp pada link <a href="https://www.apachefriends.org/download.html">xampp download</a> sesuaikan versi dengan perangkat Anda.<br>
+                            2. Klik saja Ok pada pop up yang muncul, hingga akan muncul windows setup wizard. Untuk components to install centang semua yang ada dipilihan.<br>
+                            3. Jika proses installasi telah berhasil, maka buka apk Xampp dan Start Apache beserta Mysql.<br>
+                                <a href="#!"><img class="img-fluid" src="assets/image_1/Picture1.jpg" alt="..." /></a> <br>
+                            Jika tidak ada error maka kita dapat menguji dengan buka browser dan ketikkan <span style="color:blue">http://localhost/dashboard/</span><br> <a href="#!"><img class="img-fluid" src="assets/image_1/Picture2.jpg" alt="..." /></a> <br>
+                            Untuk melihat Mysql kita apakah berhasil, buka browser dan ketikkan <span style="color:blue">http://localhost/phpmyadmin/</span><br> <a href="#!"><img class="img-fluid" src="assets/image_1/Picture3.jpg" alt="..." /></a></p>
+                        
+                        <!-- Langkah 2 -->
+                        <p><strong>2. Berikut Langkah dalam menginstall dan konfigurasi Xampp :</strong><br>
+                        <p>1. Download file zip wordpress pada link <a href="https://id.wordpress.org/download/">wordpress.org</a>
+                            <br>2. Lalu ekstrak file tersebut, namun file hasil ekstrak diletakkan di C:/xampp/htdoc
+                            <blockquote class="blockquote">*) NB:
+                                Folder htdocs merupakan folder yang dipakai untuk menaruh file-file yang bisa dibuka di browser. Jika kita menaruh selain di folder ini, maka browser tidak akan bisa membukanya.
+                                </blockquote>
+                            <br> <a href="#!"><img class="img-fluid" src="assets/image_1/Picture4.jpg" alt="..." /></a>
+                            <br>3. Selanjutnya buka pada browser Anda http://localhost/wordpress . wordpress yang terletak dibelakang tersebut adalah file hasil ekstrak dari file zip yang tadi. Namun hal tersebut dapat diubah jika Anda ingin membuat akun wordpress yang banyak.
+                            <br>4. Jika tampilan sudah seperti ini, saat nya kita melanjutkan dengan mebuat database di phpMyAdmin.
+                        </p>
+                        <p><a href="#!"><img class="img-fluid" src="assets/image_1/Picture5.jpg" alt="..." /></a></p>
+                        <p><a href="#!"><img class="img-fluid" src="assets/image_1/Picture6.jpg" alt="..." /></a><br> Membuat database dari phpmyadmin,masukkan nama database Anda setelahnya, klik Create
+                        <br><a href="#!"><img class="img-fluid" src="assets/image_1/Picture7.jpg" alt="..." /></a><br>Jika berhasil maka nama database anda akan tertampil pada sisi bagian kiri.
+                        Selanjutnya Kembali ke wordpress, jika tertampil seperti ini berarti file yang kita pindahkan ke htdoc berhasil.
+                        <br><a href="#!"><img class="img-fluid" src="assets/image_1/Picture8.jpg" alt="..." /></a><br>Masukkan <strong>nama database</strong> yang kita create sebelumnya, untuk <strong>nama-pengguna</strong> kita ubah menjadi root dan <strong>sandi</strong> biarkan kosong. Hal tersebut dikarenakan pada kita masuk kedalam phpMyAdmin dan membuat database kita masuk sebagai root dan tidak ada memasukkan password apapun.
+                        <br><a href="#!"><img class="img-fluid" src="assets/image_1/Picture9.jpg" alt="..." /></a> Klik jalankan pemasangan, maka akan tertampil, <a href="#!"><img class="img-fluid" src="assets/image_1/Picture10.jpg" alt="..." /></a>
+                        </p>
+                        <p>5. Jika semua udah maka kita login Kembali dengan akun yang telah kita buat tadi <a href="#!"><img class="img-fluid" src="assets/image_1/Picture11.jpg" alt="..." /></a> Tampilan dashboard ketika berhasil login. <a href="#!"><img class="img-fluid" src="assets/image_1/Picture12.jpg" alt="..." /></a></p>
+                        <p> Sekian dan Terimakasih</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; OchaRKS3A 2022</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

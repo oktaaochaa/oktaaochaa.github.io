@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Access Control-Ocha</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">Ocha Oktafia</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('../ochaoktafia/assets/img/access.control.png')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">                            
+                            <h1>Access Control di Mysql</h1>
+                            <span class="meta">
+                                Posted by
+                                <a href="#!">OchaRKS3A</a>
+                                on August 26, 2022
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <h2 class="section-heading">Perbedaan antara Fundamental,
+                            <br> Mandatory dan Discretionary Access Control
+                        </h2>
+                        <!-- Materi Singkat -->
+                        <p><strong>Pengertian Access Control</strong></p>
+                        <p>Kontrol akses adalah fitur keamanan yang mengontrol bagaimana pengguna dan sistem berkomunikasi dan berinteraksi dengan sistem dan sumber daya lain.
+                            <br><i>Akses</i> adalah aliran informasi antara subjek dan sumber daya.
+                            <br>Subjek adalah entitas aktif yang meminta akses ke sumber daya atau data di dalam sumber daya. Misalnya: pengguna, program, proses, dll.
+                            <br>Resource adalah entitas yang berisi informasi . Contoh : Komputer, Database, File, Program, Printer dll.
+                        </p>
+                        <p>Kontrol akses memberi organisasi kemampuan untuk mengontrol, membatasi, memantau, dan melindungi ketersediaan, integritas, dan kerahasiaan sumber daya</p>
+                        <h3><strong>Access Control Fundamentals</strong></h3>
+                        <p>Dalam keamanan informasi, kontrol akses sangat penting untuk memastikan kerahasiaan, integritas, dan ketersediaan. Mengontrol siapa yang memiliki akses ke sistem dan luasnya akses yang dimiliki pengguna sangat penting untuk memastikan keamanan sistem dan data pada sistem.</p>
+                        <P>Saya mendefinisikan konsep dasar kontrol akses: <i>sistem perlindungan</i> yang mendefinisikan spesifikasi kontrol akses dan <i>monitor referensi</i> yang merupakan mekanisme penegakan akses sistem yang memberlakukan spesifikasi ini.</P>
+                        
+                        
+                        <p>Access Control berdasarkan modelnya yaitu:</p>
+                        <h4 class="post-subtitle">1.Discrectionary Access Control</h4>
+                        <p><i>Discretionary Access Constrol </i>(DAC) merupakan suatu mekanisme data security yang menitik beratkan pada security objects, security subjects, dan access previleges dalam hal ini, DAC akan membatasi akses pada objek-objek berdasarkan identitas subjek atau group dimana mereka berada.
+                        <br>Dengan kata lain <i>Discretionary Access Control</i> (DAC) adalah model akses sumber daya berdasarkan identitas pengguna. Seorang pengguna akan diberikan hak akses ke sumber daya dengan ditempatkan pada sebuah ACL Access Control List yang berhubungan dengan sumber daya tersebut.
+                        <a href="#!"><img class="img-fluid" src="assets/image_5/dac.jpg" alt="..." /></a>
+                        </p>
+                        <p>Dalam DAC, keamanan data dapat direpresentasikan bahwa:</p>
+                        <p>1. <i>User</i> dapat menjaga data yang mereka miliki <br>
+                            2. <i>Owner</i> dapat memberikan <i>grant</i> pada <i>user</i> lain<br>
+                            3. <i>Owner</i> dapat memberikan definisi tipe akses yang akan diberikan pada user apakah akses tersebut berupa <i>read, write, execute</i>.
+                        </p>
+                        <p>Mendapatkan akses ke file dalam model DAC berfungsi seperti ini:
+                            <a href="#!"><img class="img-fluid" src="assets/image_5/Picture1.jpg" alt="..." /></a>
+                        </p>
+                        <p><strong>Kapan menggunakan DAC</strong></p>
+                        <p>DAC tidak boleh digunakan oleh organisasi yang bekerja dengan data yang sangat sensitif (medis, keuangan, militer, dll.) karena beberapa alasan:
+                            <a href="#!"><img class="img-fluid" src="assets/image_5/Picture2.jpg" alt="..." /></a>
+                            <br><br>Pada saat yang sama, DAC adalah pilihan yang baik untuk usaha kecil dengan staf TI dan anggaran keamanan siber yang terbatas. Hal ini memungkinkan untuk berbagi informasi dan memastikan kelancaran operasi bisnis.
+                        </p>
+
+                        <h4 class="post-subtitle">2.Mandatory Access Control</h4>
+                        <p><i>Mandatory Access Control </i>(MAC) adalah metode membatasi akses ke sumber daya berdasarkan sensitivitas informasi yang berisi sumber daya dan otorisasi pengguna untuk mengakses informasi dengan tingkat sensitivitas tersebut.
+                        <br>Anda menentukan sensitivitas sumber daya melalui label keamanan. Label keamanan terdiri dari tingkat keamanan dan nol atau lebih kategori keamanan. Tingkat keamanan menunjukkan tingkat atau klasifikasi hierarkis informasi </p>
+                        <a href="#!"><img class="img-fluid" src="assets/image_5/mac.jpg" alt="..." /></a>
+                        <p>Kategori keamanan mendefinisikan kategori atau grup tempat informasi tersebut berada (seperti Proyek A atau Proyek B). Pengguna hanya dapat mengakses informasi dalam sumber daya yang diberi label keamanan mereka. Jika label keamanan pengguna tidak memiliki otoritas yang cukup, pengguna tidak dapat mengakses informasi di sumber daya.</p>
+                        <p>Dengan MAC, proses mendapatkan akses terlihat seperti ini:
+                            <a href="#!"><img class="img-fluid" src="assets/image_5/Picture3.jpg" alt="..." /></a>
+                        </p>
+                        <p><strong>Prinsip Dasar MAC</strong></p>
+                        <p>1. Privasi dan kerahasiaan sumber daya organisasi adalah yang terpenting. Tidak ada yang memiliki hak default untuk mengakses atau mengedit data seseorang.
+                            <br>2. Penyediaan akses dikelola secara terpusat.
+                            <br>3. Setiap individu dan sumber daya dalam sistem memiliki label keamanan dengan klasifikasi dan kategorinya.
+                        </p>
+                        <p><strong>Kapan menggunakan MAC</strong></p>
+                        <p>Model kontrol akses ini banyak digunakan oleh organisasi pemerintah, militer, dan lembaga penegak hukum. MAC digunakan oleh pemrintah AS untuk mengamankan informasi rahasia dan untuk mendukung kebijakan dan aplikasi keamnan bertingkat. Untuk perlindungan dan kepatuhan data yang lebih baik di industry asuransi dan bidang perbankan, organisasi menggunakan MAC untuk mengontrol akses ke data akun pelanggan. Model kontrol akses non-discretionary ini juga dapat melindungi akses ke database, di mana prosedur, tabel, tampilan, dan elemen lainnya akan menjadi objek.</p>
+                        
+                        <p><strong>Perbandingan MAC vs DAC</strong></p>
+                        <a href="#!"><img class="img-fluid" src="assets/image_5/Picture4.jpg" alt="..." /></a>
+                        <p><strong>Kesimpulan :</strong></p>
+                        <p>Membandingkan MAC dan DAC , Saya melihat bahwa mereka adalah dua model kontrol akses yang berlawanan. MAC dikendalikan oleh administrator dan membutuhkan banyak waktu dan upaya untuk memeliharanya, tetapi menyediakan tingkat keamanan yang tinggi. DAC jauh lebih mudah untuk diterapkan dan dipelihara, karena pengguna dapat mengelola akses ke data yang mereka miliki. Namun, DAC tidak cukup baik untuk melindungi catatan sensitif.</p>
+                        
+                        <!-- Penjelasan -->
+                        <h4>Implementasi ke MySQL </h4>
+                        <p>Implementasi access control di mysql  dikenal dengan Data Control Language (DCL).
+                            Ialah perintah MySQL yang digunakan untuk melakukan pengontrolan akses ke data dan server database.
+                           Berikut ini adalah beberapa perintah DCL :
+                           <br> - <strong>Grant</strong>
+                           <br> - <strong>Revoke</strong>
+                        </p>
+                        <p>Perintah <i>Grant</i> digunakan untuk memberikan hak akses khusus kepada user untuk melakukan aksi tertentu pada <i>object</i> tertentu di database.</p>
+                        <p>Perintah <i>Revoke</i> digunakan untuk menarik kembali / mencabut / membatalkan hak akses khusus yang sebelumnya telah diberikan melalui perintah <i>Grant</i>.</p>
+                        
+                        <h4 class="post-subtitle">1.Fundamental Access Control</h4>
+                        <p>Dengan mengimplementasikan system access control terhadap user dengan pemberian hak akses terhadap user tersebut. Anda telah melakukan implementasikan fundamental access control. Karena telah memastikan CIA telah berjalan.</p>
+                        <p><strong>Implementasi :</strong></p>
+                        
+                        <h4 class="post-subtitle">2. Mandatory Access Control (MAC)</h4>
+                        <p>Pada implememtasi MAC pada mysql, administrator dapat memberikan semua izin berdasarkan level dari object tersebut. Namun tidak dapat memberikan hak <strong>GRANT OPTION</strong> . Karena hanya administrator yang dapat memberikan izin kepada tiap user.</p>
+                        <p> Klasifiksai dari Mandatory Access Control berdasarkan military data classification ;
+                            <a href="#!"><img class="img-fluid" src="assets/image_5/Picture5.jpg" alt="..." /></a>
+                        </p>
+                        <p>Sedangkan yang bersifat komersial, bisa dilihat dalam table berikut ;
+                            <a href="#!"><img class="img-fluid" src="assets/image_5/Picture6.jpg" alt="..." /></a>
+                        </p>
+                        <p><strong>Implementasi :</strong></p>
+
+                        <h4 class="post-subtitle">3. Discretionary Access Control (DAC)</h4>
+                        <p>Implementasi DAC pada mysql, user dapat diberi hak GRANT OPTION hal tersebut dilakukan untuk fleksibilitas.</p>
+                        <p><strong>Implementasi :</strong></p>
+                        <p>Referensi :
+                            <br>(https://www.ekransystem.com/en/blog/mac-vs-dac)
+                            <br>(https://flinsetyadi.com/kontrol-akses-dalam-keamanan-komputer/)
+                            <br>(https://www.ibm.com/docs/en/zos/2.3.0?topic=environment-mandatory-access-control-mac)
+                        </p>
+                   </div>
+                </div>
+            </div>
+        </article>
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; OchaRKS3A 2022</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

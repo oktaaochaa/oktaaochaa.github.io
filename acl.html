@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>ACL-Ocha</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">Ocha Oktafia</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('../ochaoktafia/assets/img/access\ control.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            <h1>Access Control List In Mysql</h1>
+                            <h2 class="subheading">Penjelasan singkat bagaimana cara membuat user dan pemberian privileges </h2>
+                            <span class="meta">
+                                Posted by
+                                <a href="#!">OchaRKS3A</a>
+                                on August 26, 2022
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <h2 class="section-heading">Access Control List</h2>
+                        <h4 class="post-subtitle">Mengaktifkan Keamanan Standar</h4>
+                        <p>Setelah selesai instalasi mysql, maka pertama kali harus dilakukan adalah mengaktifkan kata sandi untuk root dan menghapus anonym user.
+                            Anonym user adalah user tanpa identitas dan password. Aktifkan dan masuk ke dalam system sebagi root dan jalankan MySQL.
+                            <a href="#!"><img class="img-fluid" src="assets/image_4/Picture1.jpg" alt="..." /></a>
+                            <br>Dengan demikian kita harus mengubah auth_socket menjadi mysql_native_password dan memberikan password kepada user root.
+                        </p>
+                        <p>Masuk kedalam mysql, kemudian lihat database yang ada.
+                            <a href="#!"><img class="img-fluid" src="assets/image_4/Picture2.jpg" alt="..." /></a>
+                            <a href="#!"><img class="img-fluid" src="assets/image_4/Picture3.jpg" alt="..." /></a>
+                        </p>
+                        <p>Terdapat database mysql merupakan database administrative yang berisi table-tabel yang berkaitan dengan pengamanan instalasi MySQL, penyimpanan fungsi-fungsi pendefinisian user, dan penyediaan data yang berkaitan dengan sistem help MySQL dan fungsionalitas time-zone. Dan tentunya fokus pada pencegahan akses-akses yang tidak berhak pada MySQL server merupakan tabel-tabel yang berkaitan dengan keamanan, dimana disebut sebagai <i>grant tables.</i></p>
+                        <p>Gunakan database mysql, kemudian lihat table yang ada.
+                            <a href="#!"><img class="img-fluid" src="assets/image_4/Picture4.jpg" alt="..." /></a>                            
+                            <br>Tampilan table yang terdapat pada database mysql
+                            <br><a href="#!"><img class="img-fluid" src="assets/image_4/Picture5.jpg" alt="..." /></a>
+                        </p>
+                        <p>Ketika Anda menginstal MySQL, lima tabel grant ditambahkan ke database mysql. Tabel-tabel ini adalah user, db, host, tables_priv, dan columns_priv.</p>
+                        <p>Fungsi dari kelima tabel tersebut :
+                            <br><strong>a. user</strong><br>
+                            Berisi data user yang mendapatkan izin akses MySQL, asal koneksi dan izin akses kepada user.
+                            <br>Tingkatan akses : Global
+                            <br><br><strong>b. db</strong><br>
+                            Mengatur database apa saja yang dapat diakses oleh seorang user dan jenis izin aksesnya
+                            <br>Tingkatan akses : Database
+                            <br><br><strong>c. host</strong><br>
+                            Mengatus asl host yang diperk enankan bagi user untuk mengakses MySQL, jika lebihd ari satu host.
+                            <br>Tingkatan akses : Database
+                            <br><br><strong>d. tables_priv</strong><br>
+                            Mengatur tabel apa saja yang dapat diakses oleh seorang user dan jenis izin aksesnya.
+                            <br>Tingkatan akses : Table. 
+                            <br><br><strong>e. columns_pri v</strong><br>
+                            Mengatur kolom (field) apa saja yang dapat diakses oleh seorang user dan jenis izin aksesnya.
+                            <br>Tingkatan akses : Kolom – field                                                       
+
+                        </p>
+                        <h4 class="post-subtitle">Jenis Izin Akses User Privileges</h4>
+                        <p>Izin akses bagi user terdirli dari tiga bagian, yaitu:</p>
+                        <p>1. Tingkatan akses user biasa. Mencakup izin akses kedalam database atau kolom, yaitu :
+                            <br><br> <a href="#!"><img class="img-fluid" src="assets/image_4/1.jpg" alt="..." /></a>
+                        </p>
+                        <p>2.	Tingkatan akses Administrator or – Global Administrative<br>
+                            Hanya digunakan oleh user setingkat root atau administrator dan tidak diberikan kepada user biasa, yaitu :
+                            <br> <a href="#!"><img class="img-fluid" src="assets/image_4/2.jpg" alt="..." /></a>
+                        </p>
+                        <p>3. Tingkatan Akses khusus – Special pri vil egesDapat diterapkan pada setiap user dengan izin akses sebagai berikut :
+                            <br>a. ALL
+                            <br>b. USAGE
+                        </p>
+
+                        <h4 class="post-subtitle">Membuat User dan Pemberian Privileges</h4>
+                        <p>Disini kita akan menggunakan database testing sebagai database pengujian setiap hak telah diberikan.
+                            <br><a href="#!"><img class="img-fluid" src="assets/image_4/Picture6.jpg" alt="..." /></a>
+                            <br>Bukti table yang dimiliki dari database testing. a href="#!"><img class="img-fluid" src="assets/image_4/Picture7.jpg" alt="..." /></a>
+                        </p>
+                        <p>1. Membuat User dengan Hak Akses hanya dapat melihat satu Database dengan Table yang ditentukan.<br>
+                            Jalankan perintah CREATE USER ‘user’@’localhost’ IDENTIFIED BY ‘password’; <br>
+                            GRANT SELECT ON database.table TO ‘user’@’localhost’; <br>
+                            <a href="#!"><img class="img-fluid" src="assets/image_4/Picture8.jpg" alt="..." /></a>
+                            <br><strong>Pembuktian :</strong>
+                            <br>Login terlebih dahulu, kemudian jalankan perintah lain.
+                            <br><a href="#!"><img class="img-fluid" src="assets/image_4/Picture9.jpg" alt="..." /></a>
+                            <br><br><a href="#!"><img class="img-fluid" src="assets/image_4/Picture10.jpg" alt="..." /></a>
+                            <br>Database tidak dapat dilihat semua, dan untuk melihat ke table lain akses di tolak.
+                        </p>
+                        <p>2. Membuat User dengan Hak Akses hanya dapat melihat satu Database dengan semua Table.<br>
+                            Jalankan perintah CREATE USER ‘user’@’localhost’ IDENTIFIED BY ‘password’;<br>
+                            GRANT SELECT ON database.* TO ‘user’@’localhost’;<br>
+                            Tanda bintang disini berarti All <br>
+                            <a href="#!"><img class="img-fluid" src="assets/image_4/Picture11.jpg" alt="..." /></a>
+                            <br><strong>Pembuktian :</strong>
+                            <br>Login dengan user yang telah dibuat tadi.
+                            <br><a href="#!"><img class="img-fluid" src="assets/image_4/Picture12.jpg" alt="..." /></a>
+                            <br><a href="#!"><img class="img-fluid" src="assets/image_4/Picture13.jpg" alt="..." /></a>
+                        </p>
+                        <p>3. Membuat User dengan Hak Akses Semua data di Database yang telah ditentukan. Termasuk Update,Select, dan Delete.<br>
+                            Jalankan perintah CREATE USER ‘user’@’localhost’ IDENTIFIED BY ‘password’; <br>
+                            GRANT ALL ON database.* TO ‘user’@’localhost’;<br>
+                            <a href="#!"><img class="img-fluid" src="assets/image_4/Picture14.jpg" alt="..." /></a>
+                            <br>Namun jika ingin dapat mengakses semua data dan semua table maka, jalankan perintah GRANT ALL ON *.* TO ‘user’@’address’;
+                            <br><a href="#!"><img class="img-fluid" src="assets/image_4/Picture15.jpg" alt="..." /></a>
+                            <br>Menentukan IP agar tidak semua host bisa mengakses database dengan user yang kita buat, sehingga jauh lebih aman.
+                            <br><strong>Pembuktian :</strong>
+                            <br><a href="#!"><img class="img-fluid" src="assets/image_4/Picture16.jpg" alt="..." /></a>
+                            <br>Dan User ini dapat menghapus data pada table pegawai.
+                            <br><a href="#!"><img class="img-fluid" src="assets/image_4/Picture17.jpg" alt="..." /></a>
+                            <br><a href="#!"><img class="img-fluid" src="assets/image_4/Picture18.jpg" alt="..." /></a>
+                        </p>
+
+                        <h4 class="post-subtitle">Menghapus Privileges dari User</h4>
+                        <p>1. Menghapus semua Hak Akses dari User tertentu.<br>
+                            Jalankan perintah REVOKE ALL PRIVILEGES ON database.* FROM ‘user’@’localhost’;<br>
+                            <br><a href="#!"><img class="img-fluid" src="assets/image_4/Picture19.jpg" alt="..." /></a>
+                            <br><strong>Pembuktian :</strong>
+                            <br><a href="#!"><img class="img-fluid" src="assets/image_4/Picture20.jpg" alt="..." /></a>
+                            <br>User tersebut sudah tidak dapat lagi mengakses mysql. Karena semua hak telah dicabut.
+                            <br><a href="#!"><img class="img-fluid" src="assets/image_4/Picture21.jpg" alt="..." /></a>
+                        </p>
+                        <h4 class="post-subtitle">Menghapus User dari table user di Database mysql</h4>
+                        <p>Menghapus user agar tidak dapat lagi mengkases database mysql. <br>
+                            Jalankan perintah DROP USER ‘user’@’localhost’;
+                            <br><a href="#!"><img class="img-fluid" src="assets/image_4/Picture22.jpg" alt="..." /></a>
+                            <br><a href="#!"><img class="img-fluid" src="assets/image_4/Picture23.jpg" alt="..." /></a>
+                            <br>Pada database mysql pada table user, user percobaan telah dihapus dari daftar user.
+                        </p>
+                        <blockquote class="blockquote">Source : <a href="https://www.academia.edu/28276869/LAPORAN_PRAKTIKUM_ADMINISTRASI_BASIS_DATA_Manajemen_User_dan_Hak_Akses_Basis_Data_">https://www.academia.edu/28276869/LAPORAN_PRAKTIKUM_ADMINISTRASI_BASIS_DATA_Manajemen_User_dan_Hak_Akses_Basis_Data_</a></blockquote>
+                   </div>
+                </div>
+            </div>
+        </article>
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; OchaRKS3A 2022</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
